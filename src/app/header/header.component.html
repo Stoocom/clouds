@@ -1,0 +1,128 @@
+
+<div class="header">  
+    <div class="header__body">
+            <a class="menu__link"></a>
+            <p class="menu__center_text">Обучение</p>
+            <a class="add_block">
+                <div class="plus">
+                    
+                </div>
+                <div class="text">
+                    Запланировать
+                </div>
+            </a>
+    </div>
+</div>
+
+
+<div class="nav__block">
+    <div class="links">
+        <a class="main">
+            Главная
+        </a>
+        <div class="dash">&mdash;</div>
+        <a class="plan">
+            Планирование
+        </a>
+    </div>
+
+    <div class="title">
+        <div class="link"></div>
+        <div class="main__text">
+            Планирование
+        </div>
+    </div>
+
+    <ul class="group__links">
+        <li class="link_li">
+            <a class="group">
+                Групповое
+            </a>
+            <div class="link_line"></div>
+        </li>
+        <li class="link_li person">
+            <a class="group">
+                Индивидуальное
+            </a>
+            <div class="link_line"></div>
+        </li>
+    </ul>
+    
+    <div class="newLine"></div>
+
+</div>
+
+<div class="filter__block">
+
+    <div class="themes_block">
+        <div class="search_block">
+            <input class="search_block_input" type="text" value="Поиск"/>
+        </div>   
+        <div class="search_block" *ngFor="let item of themes2">
+            <app-item
+                class="filter_block_item"
+                [title]="item.title"
+                [new]="item.names"
+            ></app-item>
+            <div class="search_block_border"></div>
+        </div>
+    </div>
+
+    <div class="information_block">
+        <a class="sessions">34 сессии</a>
+        <a class="customization">
+            <div class="custom_icon"></div>
+            <p class="custom_text">Настроить фильтр</p>
+        </a>
+        <a class="break">
+            <div class="icon"></div>
+            <p>&emsp;Сбросить</p>
+        </a>
+    </div> 
+</div>
+
+<div class="filter__block_m">
+    <div class="themes_block">
+        <div class="search_block">
+            <div class="search_icon"></div>
+            <input class="search_block_input" type="text" placeholder="Поиск"/>
+            <a class="edit_icon"></a>
+        </div>
+    </div> 
+</div>
+
+<div class="sort__block_m">
+    <div class="title">
+        <div class="sort_text">Сортировка</div>
+        <div class="input">
+            <input class="search_block_input" type="text" value="По прогрессу обучения"/>
+            <a class="edit_icon"></a>
+        </div>
+    </div>
+    <div class="search_block_border"></div>
+</div>
+
+<div class="content_block">
+    <div class="nav">
+        <div class="column__data grey_text">Дата начала</div>
+        <div class="column__name grey_text">Название</div>
+        <div class="column__members grey_text">Участников</div>
+        <div class="column__members_m grey_text">Уч.</div>
+        <div class="column__tutor grey_text">Тренер</div>
+        <div class="column__progress deep_grey_text">
+            <p>Прогресс</p>
+            <div class="progress_mark"></div>
+        </div>
+        <div class="column__round"></div>
+    </div>
+    <div *ngFor="let item of content">
+        <app-study
+            class="block_nav"
+            [data]="item.data"
+            [name]="item.name"
+            [members]="item.members"
+            [progress]="item.progress"
+        ></app-study>
+    </div>
+</div>  
+

@@ -1,0 +1,213 @@
+
+<div class="nav_in">
+    <div class="column__data">{{data}}</div>
+    <div class="column__name">{{name}}</div>
+    <div class="column__members">{{members}}</div>
+    <div class="column__tutor"></div>
+    <div class="column__progress">
+        <div class="progress_icon"></div>
+        <div class="percent"> {{progress}} &#x25;</div>
+    </div>
+    <a class="column__round" (click)="showModalWindow()">
+        <div *ngIf="isOpenedModal" class="edit_modal_window">
+            <div class="button1">
+                <div class="edit_icon"></div>
+                <a class="button_text" (click)="openModal()">Редактировать</a>
+            </div>
+            <a class="button1">
+                <div class="remove_icon"></div>
+                <a class="button_text">Удалить слот</a>
+            </a>
+        </div>
+        <div class="three_points_icon"></div>
+    </a>
+
+    <div class="edit_window" *ngIf="isOpenEditWindow">
+
+        <div class="main_title">
+            <div class="name">Планирование</div>
+            <div class="icons">
+                <a class="ok"></a>
+                <a class="close" (click)="closeModalWindow()"></a>
+            </div>
+        </div>
+
+        <ul class="group__links">
+            <li class="link_li">
+                <a class="group">
+                    Основное
+                </a>
+                <div class="link_line"></div>
+            </li>
+            <li class="link_li person">
+                <a class="group">
+                    Участники
+                </a>
+                <div class="link_line"></div>
+            </li>
+        </ul>
+
+        <div class="sort__block_m">
+            <div class="title">
+                <div class="sort_text">Программа</div>
+                <div class="input">
+                    <input class="search_block_input" type="text" value="{{name}}"/>
+                    <a class="edit_icon"></a>
+                </div>
+            </div>
+            <div class="search_block_border"></div>
+        </div>
+
+        <div class="event_new">Мероприятие, дата и время проведения</div>
+
+        <div class="sort__block_m margin_top34">
+            <div class="title">
+                <div class="sort_text light_grey">Мероприятие</div>
+                <div class="input">
+                    <input class="search_block_input dark_grey" type="text" value="Главные правила продаж Тренинг"/>
+                </div>
+            </div>
+            <div class="search_block_border"></div>
+        </div>
+
+        <div class="plan_block">
+            <div class="empty"></div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="sort_text_small light_grey">Дата</div>
+                    <div class="input_small">
+                        <div class="plan_icon_small"></div>
+                        <input class="edit_block_input" type="text" value="28 ноября"/>
+                        <a class="close_icon_small"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="sort_text_small light_grey">Время</div>
+                    <div class="input_small">
+                        <div class="data_icon_small"></div>
+                        <input class="edit_block_input" type="text" value="9:00"/>
+                        <a class="close_icon_small"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="sort_text_small light_grey">Тренер</div>
+                    <div class="input_small">
+                        <div class="empty_icon"></div>
+                        <input class="edit_block_input" type="text" value="Сергей Ефремов"/>
+                        <a class="edit_icon"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+        </div>
+
+        <div class="sort__block_m margin_top34">
+            <div class="title">
+                <div class="sort_text light_grey">Мероприятие</div>
+                <div class="input">
+                    <input class="search_block_input dark_grey" type="text" value="Страхование без потерь Тренинг"/>
+                </div>
+            </div>
+            <div class="search_block_border"></div>
+        </div>
+        
+        <div class="plan_empty_block">
+            <div class="empty"></div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="input_small margin_top15">
+                        <div class="plan_icon_small"></div>
+                        <input class="edit_block_input light_grey" type="text" value="Дата"/>
+                        <a class="close_icon_small"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="input_small margin_top15">
+                        <div class="data_icon_small"></div>
+                        <input class="edit_block_input light_grey" type="text" value="Время"/>
+                        <a class="close_icon_small"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="input_small margin_top15">
+                        <div class="empty_icon"></div>
+                        <input class="edit_block_input light_grey" type="text" value="Тренер"/>
+                        <a class="edit_icon"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+        </div>
+
+
+
+        <div class="sort__block_m margin_top34">
+            <div class="title">
+                <div class="sort_text light_grey">Мероприятия</div>
+                <div class="input">
+                    <input class="search_block_input dark_grey" type="text" value="Страховой случай или как помочь клиенту Тренинг"/>
+                </div>
+            </div>
+            <div class="search_block_border"></div>
+        </div>
+
+        <div class="plan_empty_block">
+            <div class="empty"></div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="input_small margin_top15">
+                        <div class="plan_icon_small"></div>
+                        <input class="edit_block_input light_grey" type="text" value="Дата"/>
+                        <a class="close_icon_small"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="input_small margin_top15">
+                        <div class="data_icon_small"></div>
+                        <input class="edit_block_input light_grey" type="text" value="Время"/>
+                        <a class="close_icon_small"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+            <div class="sort__block_m plan_width">
+                <div class="title">
+                    <div class="input_small margin_top15">
+                        <div class="empty_icon"></div>
+                        <input class="edit_block_input light_grey" type="text" value="Тренер"/>
+                        <a class="edit_icon"></a>
+                    </div>
+                </div>
+                <div class="search_block_border"></div>
+            </div>
+        </div>
+
+    
+
+        <div class="checkbox">
+            <p class="check_text">Условия записи по коду</p>
+            <div class="check_block">
+                <input class="custom_check" type="radio" value="new" checked/>Не использовать код доступа
+                <input class="custom_check" type="radio" value="new"/>Требовать регистрацию
+                <input class="custom_check" type="radio" value="new"/>Запросить только имя и фамилию
+                <input class="custom_check" type="radio" value="new"/>Не требовать регистрацию, имя и фамилию
+            </div> 
+        </div>
+
+    </div>
+</div>
